@@ -1,6 +1,6 @@
 # Eye-for-an-eye: Appearance Transfer with Semantic Correspondence in Diffusion Models
 
-[arXiv]() | [Project Page]()
+[arXiv]() | [Project Page](https://sooyeon-go.github.io/eye_for_an_eye/)
 
 > **Eye-for-an-eye: Appearance Transfer with Semantic Correspondence in Diffusion Models**<br>
 > [Sooyeon Go](https://sooyeon-go.github.io/), [Kyungmook Choi](https://chkmook.github.io/), [Minjung Shin](https://minjung-s.github.io/), [Youngjung Uh](https://vilab.yonsei.ac.kr/member/professor)<br>
