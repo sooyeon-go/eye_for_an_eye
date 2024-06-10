@@ -32,7 +32,7 @@
   <link rel="stylesheet"
         href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
   <link rel="stylesheet" href="./static/css/index.css">
-  <link rel="icon" href="./static/images/favicon.svg">
+  <!--<link rel="icon" href="./static/images/favicon.svg">-->
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script defer src="./static/js/fontawesome.all.min.js"></script>
@@ -123,85 +123,6 @@
   </div>
 </section>
 
-<section class="section">
-  <div class="container is-max-desktop">
-    <!-- Abstract. -->
-    <div class="columns is-centered has-text-centered">
-      <div class="column is-four-fifths">
-        <h2 class="title is-3">Abstract</h2>
-        <div class="content has-text-justified">
-          <p>
-            As pretrained text-to-image diffusion models have become a useful tool for image synthesis, 
-            people want to specify the results in various ways. 
-            In this paper, we introduce a method to produce results with the same structure of a target image 
-            but painted with colors from a reference image, especially following the semantic correspondence between the result and the reference. 
-            E.g., the result wing takes color from the reference wing, not the reference head. 
-            Existing methods rely on the query-key similarity within self-attention layer, 
-            usually producing defective results. To this end, we propose to find semantic correspondences and explicitly rearrange the features according to the semantic correspondences. 
-            Extensive experiments show the superiority of our method in various aspects: 
-            preserving the structure of the target and reflecting the color from the reference according to the semantic correspondences, even when the two images are not aligned.
-          </p>
-        </div>
-      </div>
-    </div>
-    <!--/ Abstract. -->
-
-    <!-- Paper video. -->
-    <div class="columns is-centered has-text-centered">
-      <div class="column is-four-fifths">
-        <h2 class="title is-3">Overall Framework</h2>
-        <div class="overal_framework">
-          <img src="static/images/framework.png"
-                 class="framework"
-                 alt="framework"/>
-          <p>We transfer the semantically corresponding appearance of objects from a reference image to a target image.
-          Given \( I^\text{ref} \), \( I^\text{target} \), and their masks \( M^\text{ref} \) and \( M^\text{target} \),
-          we find semantic correspondences between their self-attention features \( F^\text{ref}_t \) and \( F^\text{out}_t \).
-          Then, we inject the rearranged features based on these correspondences.</p>
-        </div>
-      </div>
-    </div>
-    <!--/ Paper video. -->
-  </div>
-</section>
-
-<section class="section">
-  <div class="container is-max-desktop">
-    <!-- Paper video. -->
-    <div class="columns is-centered has-text-centered">
-      <div class="column is-four-fifths">
-        <h2 class="title is-3">\( KV \) vs \( V \) vs \( Feature \) Injection</h2>
-        <div class="overal_framework">
-          <img src="static/images/kv_v_f.png"
-                 class="teaser"
-                 alt="teaser" style="width: 120%;"/>
-          <p>We provide the attention maps for the target image's query pixel (red dot) at different timesteps during appearance transfer. 
-            The \( KV \) injection(first row) and \( V \) injection(second row) perform semantic matching in the same manner as our method 
-            but apply the rearrangement and injection processes to \( KV \) and \( V \) instead of the feature map, respectively.</p>
-          <p>
-            Query of \( KV \) and \( V \) injection recognizes belly parts with different colors as different parts, leading to bring different appearance.
-          </p>
-        </div>
-      </div>
-    </div>
-    <!--/ Paper video. -->
-  </div>
-</section>
-
-
-<section class="section">
-  <div class="container">
-    <h2 class="title is-3 has-text-centered">Results</h2>
-    <div class="columns is-centered">
-      <div class="column is-12">
-        <figure class="image" style="display: flex; justify-content: center;">
-          <img src="static/images/results.png" alt="result" style="width: 70%; max-width: 1200px;">
-        </figure>
-      </div>
-    </div>
-  </div>
-</section>
-
 
 <section class="section">
   <div class="container is-max-desktop">
@@ -248,6 +169,86 @@
     </div>
     <!--/ Animation. -->
 
+  </div>
+</section>
+
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <!-- Abstract. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+            As pretrained text-to-image diffusion models have become a useful tool for image synthesis, 
+            people want to specify the results in various ways. 
+            In this paper, we introduce a method to produce results with the same structure of a target image 
+            but painted with colors from a reference image, especially following the semantic correspondence between the result and the reference. 
+            E.g., the result wing takes color from the reference wing, not the reference head. 
+            Existing methods rely on the query-key similarity within self-attention layer, 
+            usually producing defective results. To this end, we propose to find semantic correspondences and explicitly rearrange the features according to the semantic correspondences. 
+            Extensive experiments show the superiority of our method in various aspects: 
+            preserving the structure of the target and reflecting the color from the reference according to the semantic correspondences, even when the two images are not aligned.
+          </p>
+        </div>
+      </div>
+    </div>
+    <!--/ Abstract. -->
+
+    <!-- Paper video. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Overall Framework</h2>
+        <div class="overal_framework">
+          <img src="static/images/framework.png"
+                 class="framework"
+                 alt="framework"/>
+          <p>We transfer the semantically corresponding appearance of objects from a reference image to a target image.
+          Given \( I^\text{ref} \), \( I^\text{target} \), and their masks \( M^\text{ref} \) and \( M^\text{target} \),
+          we find semantic correspondences between their self-attention features \( F^\text{ref}_t \) and \( F^\text{out}_t \).
+          Then, we inject the rearranged features based on these correspondences.</p>
+        </div>
+      </div>
+    </div>
+    <!--/ Paper video. -->
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <h2 class="title is-3 has-text-centered">\( KV \) vs \( V \) vs \( Feature \) Injection</h2>
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <figure class="image">
+          <img src="static/images/new_kv_v_f.png" alt="result" style="width: 100%;">
+        </figure>
+        <!-- 여기서 div로 간단히 텍스트를 감쌉니다 -->
+        <div class="has-text-centered">
+          <p>We provide the attention maps for the target image's query pixel (red dot) at different timesteps during appearance transfer. 
+            The \( KV \) injection(first row) and \( V \) injection(second row) perform semantic matching in the same manner as our method 
+            but apply the rearrangement and injection processes to \( KV \) and \( V \) instead of the feature map, respectively.</p>
+          <p>Query of \( KV \) and \( V \) injection recognizes belly parts with different colors as different parts, leading to bring different appearance.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+
+<section class="section">
+  <div class="container">
+    <h2 class="title is-3 has-text-centered">More results</h2>
+    <div class="columns is-centered">
+      <div class="column is-12">
+        <figure class="image" style="display: flex; justify-content: center;">
+          <img src="static/images/results.png" alt="result" style="width: 70%; max-width: 1200px;">
+        </figure>
+      </div>
+    </div>
   </div>
 </section>
 
