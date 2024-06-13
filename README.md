@@ -11,3 +11,16 @@ As pretrained text-to-image diffusion models have become a useful tool for image
 ![Teaser](./images/teaser_img.png)
 
 Code coming Soon!
+
+## Citation
+If you use this code for your research, please cite the following work: 
+```
+@misc{go2024eyeforaneye,
+      title={Eye-for-an-eye: Appearance Transfer with Semantic Correspondence in Diffusion Models}, 
+      author={Sooyeon Go and Kyungmook Choi and Minjung Shin and Youngjung Uh},
+      year={2024},
+      eprint={2406.07008},
+      archivePrefix={arXiv},
+      primaryClass={cs.CV}
+}
+```
