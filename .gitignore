@@ -131,3 +131,6 @@ cython_debug/
 
 sam_hq
 sam_hq_vit_l.pth
+TOKEN
+output
+appearance_transfer_model_final.py

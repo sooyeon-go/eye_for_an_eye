@@ -80,17 +80,14 @@ class CrossImageAttentionStableDiffusionPipeline(StableDiffusionPipeline):
         # of the Imagen paper: https://arxiv.org/pdf/2205.11487.pdf . `guidance_scale = 1`
         # corresponds to doing no classifier free guidance.
         do_classifier_free_guidance = guidance_scale > 1.0
-        none_guidance = True
+        none_guidance = False
 
         # 3. Encode input prompt
         text_encoder_lora_scale = (
             cross_attention_kwargs.get("scale", None) if cross_attention_kwargs is not None else None
         )
         
-        if do_classifier_free_guidance==True and none_guidance==True:
-            guide_bool = False
-        elif do_classifier_free_guidance==False:
-            guide_bool = False
+        guide_bool = False
         if none_guidance==False:
             guide_bool = True
             
@@ -144,7 +141,7 @@ class CrossImageAttentionStableDiffusionPipeline(StableDiffusionPipeline):
                 latent_model_input,
                 t,
                 encoder_hidden_states=prompt_embeds,
-                cross_attention_kwargs={'v_swap': do_v_swap, 'feature_swap': True, 'mask_lst': mask_lst},
+                cross_attention_kwargs={'v_swap': do_v_swap, 'feature_swap': not do_v_swap, 'mask_lst': mask_lst},
                 return_dict=False,
             )[0]
 

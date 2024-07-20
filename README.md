@@ -33,22 +33,39 @@ Please download the ViT-L HQ-SAM model from the provided link.
 ## Prepare the data
 
 ### Step 1: Create a Data Folder
-- Create a folder named `your_data_folder`.(For example, [example](/example/))
+- Create a `your_data_folder`.(For example, [example](/example/))
 - Place your source and target data inside this folder.
 
-### Step 2: Generate Bounding Boxes
+### Step 2: Generate Bounding Box
 - Open and run the [make_bbox.ipynb](make_bbox.ipynb).
 - This notebook will generate and save bbox for your data.
 
+## Perform Appearance Transfer(Single Object version)
 
-## Perform Appearance Transfer
+```
+python run.py \
+--app_image_path example/0.jpg \ # Appearance image directory
+--struct_image_path example/1.jpg \ # Structure image directory
+--output_path output \
+--domain_name bird \ # Domain of image
+--use_masked_adain True \
+--guidance_scale 2.5 \
+--mask_use True \
+--bbox_path example/crop_box.json
+```
+Notes:
+- You can adjust the guidance scale from completely removed to 2.5. Without guidance, you can get more accurate matching and the structure is preserved well. However, the result quality may not be as good. Conversely, providing guidance can give good result quality, even if it slightly deviates from the target's structure.
+- Adjusting '--feat_range' and '--adain_range' may improve result quality.(In most cases, the default values provided the best performance).
+- If you do not use a mask, you cannot preserve the background of the target image.
+- You can use '--do_v_swap' to see the difference between the V injection and Feature injection discussed in the paper.
+- We used the correspondence matching method from DIFT, but if there is a better matching approach available, it can be utilized to enhance the result matching quality.
 
+Below codes coming Soon!
 
+## Perform Appearance Transfer(Multi object version)
+![Teaser](./images/multi_img.png)
 
 ## Demo
-
-Below Code coming Soon!
-
 
 ## Citation
 If you use this code for your research, please cite the following work: 
@@ -62,3 +79,7 @@ If you use this code for your research, please cite the following work:
       primaryClass={cs.CV}
 }
 ```
+
+## Acknowledgement
+
+Our code is largely based on the following open-source projects: [DIFT](https://github.com/Tsingularity/dift.git), [Cross-image-attention](https://github.com/garibida/cross-image-attention.git). Our heartfelt gratitude goes to the developers of these resources!
