@@ -26,7 +26,9 @@ conda activate eye_for_eye
 ```
 
 (Optional) You may also want to install [SAM-HQ](https://github.com/SysCV/sam-hq) to extract the instance masks:
-pip install git+https://github.com/SysCV/sam-hq.git
+```
+pip install git+https://github.com/SysCV/sam-hq.git.
+```
 Please download the ViT-L HQ-SAM model from the provided link.
 
 
