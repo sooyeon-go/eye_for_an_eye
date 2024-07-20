@@ -12,6 +12,18 @@ As pretrained text-to-image diffusion models have become a useful tool for image
 
 Code coming Soon!
 
+## Description  
+Official implementation of our Eye-for-an-eye: Appearance Transfer with Semantic Correspondence in Diffusion Models paper.
+
+
+## Environment
+Our code builds on the requirement of the `diffusers` library. To set up their environment, please run:
+```
+conda env create -f environment/environment.yaml
+conda activate eye_for_eye
+```
+
+
 ## Citation
 If you use this code for your research, please cite the following work: 
 ```
