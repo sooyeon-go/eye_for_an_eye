@@ -63,6 +63,7 @@ Notes:
 Below codes coming Soon!
 
 ## Perform Appearance Transfer(Multi object version)
+<img src="./images/exmulti_img.png" style="width: 100%;">
 ![Teaser](./images/exmulti_img.png)
 
 ## Demo
