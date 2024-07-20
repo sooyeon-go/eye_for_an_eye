@@ -10,8 +10,6 @@ As pretrained text-to-image diffusion models have become a useful tool for image
 
 ![Teaser](./images/teaser_img.png)
 
-Code coming Soon!
-
 ## Description  
 Official implementation of our Eye-for-an-eye: Appearance Transfer with Semantic Correspondence in Diffusion Models paper.
 
