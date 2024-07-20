@@ -19,9 +19,15 @@ Official implementation of our Eye-for-an-eye: Appearance Transfer with Semantic
 ## Environment
 Our code builds on the requirement of the `diffusers` library. To set up their environment, please run:
 ```
+git clone https://github.com/sooyeon-go/eye_for_an_eye.git
+cd eye_for_an_eye
 conda env create -f environment/environment.yaml
 conda activate eye_for_eye
 ```
+
+(Optional) You may also want to install [SAM-HQ](https://github.com/SysCV/sam-hq) to extract the instance masks:
+pip install git+https://github.com/SysCV/sam-hq.git
+Please download the ViT-L HQ-SAM model from the provided link.
 
 
 ## Citation
