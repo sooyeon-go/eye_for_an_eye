@@ -63,7 +63,7 @@ Notes:
 Below codes coming Soon!
 
 ## Perform Appearance Transfer(Multi object version)
-![Teaser](./images/multi_img.png)
+![Teaser](./images/exmulti_img.png)
 
 ## Demo
 
