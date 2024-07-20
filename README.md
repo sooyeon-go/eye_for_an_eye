@@ -55,9 +55,9 @@ python run.py \
 ```
 Notes:
 - You can adjust the guidance scale from completely removed to 2.5. Without guidance, you can get more accurate matching and the structure is preserved well. However, the result quality may not be as good. Conversely, providing guidance can give good result quality, even if it slightly deviates from the target's structure.
-- Adjusting '--feat_range' and '--adain_range' may improve result quality.(In most cases, the default values provided the best performance).
+- Adjusting `--feat_range` and `--adain_range` may improve result quality.(In most cases, the default values provided the best performance).
 - If you do not use a mask, you cannot preserve the background of the target image.
-- You can use '--do_v_swap' to see the difference between the V injection and Feature injection discussed in the paper.
+- You can use `--do_v_swap` to see the difference between the V injection and Feature injection discussed in the paper.
 - We used the correspondence matching method from DIFT, but if there is a better matching approach available, it can be utilized to enhance the result matching quality.
 
 Below codes coming Soon!
