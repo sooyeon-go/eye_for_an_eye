@@ -30,15 +30,22 @@ pip install git+https://github.com/SysCV/sam-hq.git.
 Please download the ViT-L HQ-SAM model from the provided link.
 
 
-## Get Started
+## Prepare the data
 
 ### Step 1: Create a Data Folder
-- Create a folder named `your_data_folder`.(ex [example](/example/))
+- Create a folder named `your_data_folder`.(For example, [example](/example/))
 - Place your source and target data inside this folder.
 
 ### Step 2: Generate Bounding Boxes
 - Open and run the [make_bbox.ipynb](make_bbox.ipynb).
 - This notebook will generate and save bbox for your data.
+
+
+## Perform Appearance Transfer
+
+
+
+## Demo
 
 Below Code coming Soon!
 
