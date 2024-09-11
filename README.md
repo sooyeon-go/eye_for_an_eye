@@ -39,6 +39,7 @@ Please download the ViT-L HQ-SAM model from the provided link.
 ### Step 2: Generate Bounding Box
 - Open and run the [make_bbox.ipynb](make_bbox.ipynb).
 - This notebook will generate and save bbox for your data.
+- If you have any other method for creating bounding boxes, feel free to use it.
 
 ## Perform Appearance Transfer(Single Object version)
 
