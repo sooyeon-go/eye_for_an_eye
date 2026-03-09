@@ -257,12 +257,11 @@ class AppearanceTransferModel:
                     hidden_states = hidden_states + residual
 
                 hidden_states = hidden_states / attn.rescale_output_factor
-
                 return hidden_states
 
         def register_recr(net_, count, place_in_unet):
             if net_.__class__.__name__ == 'ResnetBlock2D':
-                pass
+                pass    
             if net_.__class__.__name__ == 'Attention':
                 net_.set_processor(AttentionProcessor(place_in_unet + f"_{count + 1}"))
                 return count + 1

@@ -1,4 +1,4 @@
-# Eye-for-an-eye: Appearance Transfer with Semantic Correspondence in Diffusion Models
+# Eye-for-an-eye: Appearance Transfer with Semantic Correspondence in Diffusion Models(WACV 2026)
 
 [arXiv](https://arxiv.org/abs/2406.07008) | [Project Page](https://sooyeon-go.github.io/eye_for_an_eye/)
 

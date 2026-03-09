@@ -90,7 +90,7 @@ class CrossImageAttentionStableDiffusionPipeline(StableDiffusionPipeline):
         guide_bool = False
         if none_guidance==False:
             guide_bool = True
-            
+
         prompt_embeds = self._encode_prompt(
             prompt,
             device,
@@ -144,6 +144,8 @@ class CrossImageAttentionStableDiffusionPipeline(StableDiffusionPipeline):
                 cross_attention_kwargs={'v_swap': do_v_swap, 'feature_swap': not do_v_swap, 'mask_lst': mask_lst},
                 return_dict=False,
             )[0]
+            import pdb
+            pdb.set_trace()
 
             # perform guidance
             if do_classifier_free_guidance:
